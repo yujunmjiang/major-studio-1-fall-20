@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>NASM</title>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <style>
+    body { margin: 0; position: fixed; top: 0; right: 0; bottom: 0; left: 0; }
+    
+    svg {
+      background-color: black;
+    }
+    
+    .bounding-box {
+      fill: white;
+      fill-opacity: 0;
+      stroke: #fff;
+      stroke-opacity: 0.5;
+      stroke-dasharray: 3,3;
+    }
+    
+    .label {
+      font-family: monospace;
+      opacity: 1;
+      font-size: 10px;
+      fill: #fff;
+    }
+    
+    .info {
+      font-family: monospace;
+      opacity: 1;
+      font-size: 8px;
+      fill: #fff;
+    }
+    
+    .planet circle, .graticule {
+      fill: none;
+      stroke: #123;
+      stroke-opacity: 0.15;
+    }
+    
+    .planet circle {
+      stroke-width: 1px;
+    }
+    
+    .axis-line {
+      stroke: #fff;
+      stroke-opacity: 0.3;   
+    }
+    
+    .star {
+      fill: white;
+      opacity: 1;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <script>
+	var margin = {top: 100, right: 50, bottom: 100, left: 50};
+
+    var width = innerWidth - margin.left - margin.right,
+        height = innerHeight - margin.top - margin.bottom;
+    
+    var svg = d3.select("body").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var starArea = d3.select("svg").append("g");
+
+    var config = {
+      padding: 10,
+      axisMultiplier: 1.4,
+      velocity: [0.01, 0],
+      starRadius: 1,
+      glowRadius: 2
+    };
+
+    // Manually add test data
+    var solar = [
+      {name: "Smithsonian", tilt: 0.00, ww: 737, pv: 71.55, radius: 1030, period: 0.72, colours: ["#ffffff", "#ffD609", "#026596"]},
+      {name: "USA", tilt: 0.00, ww: 232, pv: 60.26, radius: 385, period: 0.60, colours: ["#ffffff", "#b22234", "#3c3b6e"]},
+      {name: "France", tilt: 0.00, ww: 129, pv: 87.76, radius: 147, period: 0.88, colours: ["0050a4", "#ffffff", "#ef4135"]},
+      {name: "UK", tilt: 0.00, ww: 129, pv: 93.48, radius: 138, period: 0.94, colours: ["#012169", "#c8102e", "#ffffff"]},
+      {name: "Germany", tilt: 0.00, ww: 73, pv: 92.41, radius: 79, period: 0.92, colours: ["#000000", "#dd0000", "#ffce00"]},
+      {name: "Netherlands", tilt: 0.00, ww: 36, pv: 80.00, radius: 45, period: 0.80, colours: ["#ae1c28", "#ffffff", "#21468b"]},
+      {name: "Switzerland", tilt: 0.00, ww: 10, pv: 29.41, radius: 34, period: 0.29, colours: ["#ff0000", "#ffffff", "#ffffff"]},
+      {name: "Italy", tilt: 0.00, ww: 27, pv: 84.38, radius: 32, period: 0.84, colours: ["#008c45", "#f4f5f0", "#cd212a"]},
+      {name: "Sweden", tilt: 0.00, ww: 11, pv: 44.00, radius: 25, period: 0.44, colours: ["#006aa8", "#006aa8", "#fecd00"]},
+      {name: "Japan", tilt: 0.00, ww: 18, pv: 94.74, radius: 19, period: 0.95, colours: ["#ffffff", "#ffffff", "#be0029"]},
+      {name: "Australia", tilt: 0.00, ww: 11, pv: 84.62, radius: 13, period: 0.85, colours: ["#00008b", "#ff0000", "#ffffff"]},
+      {name: "China", tilt: 0.00, ww: 12, pv: 100.00, radius: 12, period: 1.00, colours: ["#df2407", "#df2407", "#ffdf00"]}
+    ];
+    
+    var definitions = d3.select("svg").append("defs");
+    var filter = definitions.append("filter")
+      .attr("id", "glow");
+    filter.append("feGaussianBlur")
+      .attr("class", "blur")
+      .attr("stdDeviation", config.glowRadius)
+      .attr("result","coloredBlur");
+    var feMerge = filter.append("feMerge")
+    feMerge.append("feMergeNode")
+      .attr("in","coloredBlur");
+    feMerge.append("feMergeNode")
+      .attr("in","SourceGraphic");
+    
+    function generateStars(number) {
+      var stars = starArea.selectAll("circle")
+      	.data(d3.range(number).map(d => 
+           i = {x: Math.random() * (width + margin.left + margin.right), y: Math.random() * (height + margin.top + margin.bottom), r: Math.random() * config.starRadius}
+        ))
+      	.enter().append("circle")
+      	  .attr("class", "star")
+      	  .attr("cx", d => d.x)
+      	  .attr("cy", d => d.y)
+      	  .attr("r", d => d.r);
+    }
+    
+    function displayPlanets(cfg, planets) {
+      var boundingSize = (width / planets.length) - cfg.padding;
+      
+      var boundingArea = svg.append("g")
+     	.selectAll("g")
+      	.data(planets)
+      	.enter().append("g")
+      	  .attr("transform", (d, i) => "translate(" + [i * (boundingSize + cfg.padding), height / 2] + ")")
+          .on("mouseover", showInfo)
+      	  .on("mouseout", hideInfo);
+      
+      var boundingRect = boundingArea.append("rect")
+      	.attr("class", "bounding-box")
+      	.attr("y", -boundingSize / 2)
+      	.attr("width", boundingSize)
+      	.attr("height", boundingSize);
+      
+      var info = boundingArea.append("g")
+      	.attr("transform", "translate(" + [0, (boundingSize / 2) + 18] + ")")
+      	.attr("class", "info")
+      	.style("opacity", 0);
+      info.append("text")
+      	.text(d => "Posters: " + d.radius);
+      info.append("text")
+      	.attr("y", 12)
+      	.text(d => "During World War: " + d.ww);
+      info.append("text")
+      	.attr("y", 24)
+      	.text(d => "Percentage: " + d.pv);
+      
+      var labels = boundingArea.append("text")
+      	.attr("class", "label")
+      	.attr("y", -boundingSize / 2)
+      	.attr("dy", -12)
+      	.text(d => d.name);
+      
+    	var radiusScale = d3.scaleLinear()
+    	  .domain([0, d3.max(planets, d => d.radius)])
+      	  .range([0, (boundingSize / 2) - 3]); 
+      
+      var graticuleScale = d3.scaleLinear()
+    	.domain(d3.extent(planets, d => d.radius))
+      	.range([20, 10]);
+      
+      var planets = boundingArea.each(function(d) {
+    	var x = d3.select(this);
+        drawPlanet(x, d);
+      });
+      
+      function drawPlanet(element, data) { 
+        var rotation = [0, 0, data.tilt];
+        
+        var projection = d3.geoOrthographic()
+          .translate([0, 0])
+          .scale(radiusScale(data.radius))
+          .clipAngle(90)
+          .precision(0.1);
+        
+        var path = d3.geoPath()
+    	  .projection(projection);
+        
+    	var graticule = d3.geoGraticule();
+        
+        var planet = element.append("g")
+    	  .attr("class", "planet")
+    	  .attr("transform", "translate(" + [boundingSize / 2, 0] + ")");
+        
+        var defs = d3.select("svg").select("defs");
+        
+        var gradient = defs.append("radialGradient")
+          .attr("id", "gradient" + data.name)
+          .attr("cx", "25%")
+          .attr("cy", "25%");
+        
+    	// The offset at which the gradient starts
+        gradient.append("stop")
+          .attr("offset", "5%")
+          .attr("stop-color", data.colours[0]);
+
+        // The offset at which the gradient changes
+    	gradient.append("stop")
+          .attr("offset", "50%")
+          .attr("stop-color", data.colours[1]);
+		
+    	// The offset at which the gradient ends
+    	gradient.append("stop")
+          .attr("offset", "100%")
+          .attr("stop-color", data.colours[2]);
+    
+    	var axis = planet.append("line")
+    	  .attr("class", "axis-line")
+    	  .attr("x1", -radiusScale(data.radius) * cfg.axisMultiplier)
+    	  .attr("x2", radiusScale(data.radius) * cfg.axisMultiplier)
+    	  .attr("transform", "rotate(" + (90 - data.tilt) + ")");
+    
+        var fill = planet.append("circle")
+          .attr("r", radiusScale(data.radius))
+          .style("fill", "url(#gradient" + data.name + ")")
+          .style("filter", "url(#glow)");
+        
+        var gridLines = planet.append("path")
+          .attr("class", "graticule")
+          .datum(graticule.step([graticuleScale(data.radius), graticuleScale(data.radius)]))
+          .attr("d", path);
+        
+        d3.timer(function(elapsed) {
+          // Rotate projection
+          projection.rotate([rotation[0] + elapsed * cfg.velocity[0] / data.period, rotation[1] + elapsed * cfg.velocity[1] / data.period, rotation[2]]);
+          // Redraw gridlines
+          gridLines.attr("d", path);
+        })
+      }
+    }
+    
+    function showInfo(d) {
+      d3.select(this).select("g.info")
+      	.transition()
+      	.style("opacity", 1);
+    }
+    
+    function hideInfo(d) {
+      d3.select(this).select("g.info")
+      	.transition()
+      	.style("opacity", 0);
+    }
+    
+    generateStars(500);
+    displayPlanets(config, solar);
+    
+    starArea.lower();
+
+    // National Flag Color Reference: https://colorswall.com/
+
+  </script>
+</body>
