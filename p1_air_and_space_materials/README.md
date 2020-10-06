@@ -5,3 +5,5 @@ The Smithsonian's [National Air and Space Museum](https://airandspace.si.edu/) m
 In this project, I will foucus on the relations between different variables such us the aircraft's first service year, materials, origin of country, etc. The data visualization should use a quantitative method to translate the metadata from number and text into a visual system.
 
 <img src="https://github.com/yujunmjiang/major-studio-1-fall-20/blob/master/p1_air_and_space_materials/document/Screen%20Shot%202020-10-05%20at%2010.55.49%20PM.png">
+
+The metadata will be fetched from [Smithsonian Institution Open Access API](http://edan.si.edu/openaccess/apidocs/) and [here](https://thisismattmiller.com/post/smithsonian-open-access-data-release/) is some information about their data release.
