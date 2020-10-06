@@ -18,3 +18,9 @@ The Museum's two buildings house thousands of artifacts showcased in exhibitions
 
 For the visual disign, I referenced the architectural elements in the Steven F. Udvar-Hazy Center becuase people can see most aircraft and spacecraft in there. I believe there should be some connections beteewn the museum's collection and architecture. Therefore, I have analyzed the museum's strcture, re-combined them with my dataset, and applied it into the final visualization.
 
+<img src="https://github.com/yujunmjiang/major-studio-1-fall-20/blob/master/p1_air_and_space_materials/document/Screen%20Shot%202020-10-05%20at%2010.56.04%20PM.png">
+
+Considering the font choice, I think [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) is a better option than [Courier](https://en.wikipedia.org/wiki/Courier_(typeface))
+
+
+
