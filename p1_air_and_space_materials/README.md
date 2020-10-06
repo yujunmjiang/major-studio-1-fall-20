@@ -6,4 +6,4 @@ In this project, I will foucus on the relations between different variables such
 
 <img src="https://github.com/yujunmjiang/major-studio-1-fall-20/blob/master/p1_air_and_space_materials/document/Screen%20Shot%202020-10-05%20at%2010.55.49%20PM.png">
 
-The metadata will be fetched from the [Smithsonian Institution Open Access API](http://edan.si.edu/openaccess/apidocs/) and [here](https://thisismattmiller.com/post/smithsonian-open-access-data-release/) is some information about their data release. However, the data is not a completed version as the 
+The metadata will be fetched from the [Smithsonian Institution Open Access API](http://edan.si.edu/openaccess/apidocs/) and [here](https://thisismattmiller.com/post/smithsonian-open-access-data-release/) is some information about their data release. However, the data is not a completed version as the NASM's website shows, so I have to add the missing parts manually.
