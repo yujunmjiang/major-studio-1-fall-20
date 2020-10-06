@@ -24,7 +24,7 @@ Considering the font choice, I think [IBM Plex Mono](https://fonts.google.com/sp
 
 <img src="https://github.com/yujunmjiang/major-studio-1-fall-20/blob/master/p1_air_and_space_materials/document/Screen%20Shot%202020-10-05%20at%2011.45.50%20PM.png">
 
-As you can see, the shape of visualization is referenced from the Steven F. Udvar-Hazy Center and it seems like a bird view of airplanes. Then, I used three different color palettes to visualize the aircraft's first service year, materials, and origin of country. The difference is the change of opacity will only be applied to visualize the total service time and it was inspired by aircraft's coatings are faded when time goes by. Each meterial has been assigned with an unique color to help people understand what are aircraft's compositions base on our common understanding.
+As you can see, the shape of visualization is referenced from the Steven F. Udvar-Hazy Center and it seems like a bird view of airplanes. Then, I used three different color palettes to visualize the aircraft's first service year, materials, and origin of country. The difference is the change of opacity will only be applied to visualize the total service time and it was inspired by aircraft's coatings are faded when time goes by. Each meterial has been assigned with an unique color to help people understand what are aircraft's compositions base on our common understanding. And the color of different countries are matched with they national flags. The goal is to make a simple design but use the most easily understandable visual language to tell a story.
 
 
 
