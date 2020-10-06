@@ -14,7 +14,6 @@ The metadata will be fetched from the [Smithsonian Institution Open Access API](
 
 The Museum's two buildings house thousands of artifacts showcased in exhibitions on aviation, space exploration, and planetary science. At both of its locations, the Museum presents programs, educational activities, lectures, and performances that reflect the American spirit, and the innovation, courage, and optimism that have led to triumphs in the history, science and technology of flight. At the [Museum in Washington, DC](https://airandspace.si.edu/museum-dc), which opened in 1976 and is located in the heart of the Smithsonian complex in Washington, DC, some of the most awe-inspiring icons of flight are on display. The [Steven F. Udvar-Hazy Center](https://airandspace.si.edu/udvar-hazy-center), located near Washington Dulles International Airport in Chantilly, Virginia, is a massive structure with open, hangar-like settings that accommodate large aircraft and spacecraft, as well as entire collections of aviation and space artifacts.
 
-
 <img src="https://github.com/yujunmjiang/major-studio-1-fall-20/blob/master/p1_air_and_space_materials/document/Screen%20Shot%202020-10-05%20at%2010.55.57%20PM.png">
 
 
