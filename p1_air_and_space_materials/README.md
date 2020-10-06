@@ -20,7 +20,7 @@ For the visual disign, I referenced the architectural elements in the Steven F. 
 
 <img src="https://github.com/yujunmjiang/major-studio-1-fall-20/blob/master/p1_air_and_space_materials/document/Screen%20Shot%202020-10-05%20at%2010.56.04%20PM.png">
 
-Considering the font choice, I think [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) is a better option than [Courier](https://en.wikipedia.org/wiki/Courier_(typeface))
+Considering the font choice, I think [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) is a better option than [Courier](https://en.wikipedia.org/wiki/Courier_(typeface)) even both of them are created for IBM's typewriters. The newer version can express a sense of the military element and technological development.
 
 
 
