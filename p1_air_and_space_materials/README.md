@@ -16,4 +16,5 @@ The Museum's two buildings house thousands of artifacts showcased in exhibitions
 
 <img src="https://github.com/yujunmjiang/major-studio-1-fall-20/blob/master/p1_air_and_space_materials/document/Screen%20Shot%202020-10-05%20at%2010.55.57%20PM.png">
 
+For the visual disign, I referenced the architectural elements in the Steven F. Udvar-Hazy Center becuase people can see most aircraft and spacecraft in there. I believe there should be some connections beteewn the museum's collection and architecture.
 
