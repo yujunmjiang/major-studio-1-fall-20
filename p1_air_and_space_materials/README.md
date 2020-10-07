@@ -22,7 +22,7 @@ For the visual disign, I referenced the architectural elements in the Steven F. 
 
 Considering the font choice, I think [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) is a better option than [Courier](https://en.wikipedia.org/wiki/Courier_(typeface)) even both of them are created for IBM's typewriters. The newer version can express a sense of the military element and technological development.
 
-<img src="https://github.com/yujunmjiang/major-studio-1-fall-20/blob/master/p1_air_and_space_materials/document/Screen%20Shot%202020-10-05%20at%2011.45.50%20PM.png">
+<img src="https://github.com/yujunmjiang/major-studio-1-fall-20/blob/master/p1_air_and_space_materials/document/Screen%20Shot%202020-10-06%20at%208.00.32%20PM.png">
 
 As you can see, the shape of visualization is referenced from the Steven F. Udvar-Hazy Center and it seems like a bird view of airplanes. Then, I used three different color palettes to visualize the aircraft's first service year, materials, and origin of country. The difference is the change of opacity will only be applied to visualize the total service time and it was inspired by aircraft's coatings are faded when time goes by. Each meterial has been assigned with an unique color to help people understand what are aircraft's compositions base on our common understanding. And the color of different countries are matched with they national flags. The name of Digicraft is a combination of words "digitalize" and "aircraft". The goal is to make a simple design but use the most easily understandable visual language to tell a story.
 
