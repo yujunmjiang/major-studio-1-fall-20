@@ -2,54 +2,72 @@
 Data
 **************/
 var colors = [
-  [ 0, 0, 0 ],            // year (0)
-  [ 124, 192, 255],       // cover (1)
-  [ 132, 135, 137],       // materials: aluminum (2)
-  [ 176, 102, 80],        // materials: copper (3)
-  [ 0, 0, 0],             // materials: cord (4)
-  [ 191, 186, 175],       // materials: cotton (5)
-  [ 255, 189, 238],       // materials: fabric (6)
-  [ 238, 238, 238],       // materials: plastic (7)
-  [ 214, 87, 32],         // materials: rubber (8)
-  [ 202, 191, 187],       // materials: silk (9)
-  [ 67, 70, 75],          // materials: steel (10)
-  [ 133, 94, 66],         // materials: wood (11)
+  [ 0, 0, 0 ],             // year (0)
+  [ 124, 192, 255 ],       // cover (1)
+  [ 132, 135, 137 ],       // material: aluminum (2)
+  [ 176, 102, 80 ],        // material: copper (3)
+  [ 0, 0, 0 ],             // material: cord (4)
+  [ 191, 186, 175 ],       // material: cotton (5)
+  [ 255, 189, 238 ],       // material: fabric (6)
+  [ 238, 238, 238 ],       // material: plastic (7)
+  [ 214, 87, 32 ],         // material: rubber (8)
+  [ 202, 191, 187 ],       // material: silk (9)
+  [ 67, 70, 75 ],          // material: steel (10)
+  [ 133, 94, 66 ],         // material: wood (11)
+  [ 239, 65, 53 ],         // country: France (12)
+  [ 255, 255, 255 ],       // country: France (13)
+  [ 0, 80, 164 ],          // country: France (14)
+  [ 255, 206, 0 ],         // country: Germany (15)
+  [ 221, 0, 0 ],           // country: Germany (16)
+  [ 0, 0, 0 ],             // country: Germany (17)
+  [ 205, 33, 42 ],         // country: Italy (18)
+  [ 244, 245, 240 ],       // country: Italy (19)
+  [ 0, 140, 69 ],          // country: Italy (20)
+  [ 190, 0, 41 ],          // country: Japan (21)
+  [ 255, 255, 255 ],       // country: Japan (22)
+  [ 33, 70, 139 ],         // country: Netherland (23)
+  [ 255, 255, 255 ],       // country: Netherland (24)
+  [ 174, 28, 40 ],         // country: Netherland (25)
+  [ 170, 21, 27 ],         // country: Spain (26)
+  [ 241, 191, 0 ],         // country: Spain (27)
+  [ 255, 217, 0 ],         // country: Union of Soviet Socialist Republics (28)
+  [ 205, 0, 0 ],           // country: Union of Soviet Socialist Republics (29)
+  [ 255, 255, 255 ],       // country: United Kingdom (30)
+  [ 200, 16, 46 ],         // country: United Kingdom (31)
+  [ 1, 33, 105 ],          // country: United Kingdom (32)
+  [ 60, 59, 110 ],         // country: United States of America (33)
+  [ 178, 34, 52 ],         // country: United States of America (34)
+  [ 255, 255, 255 ],       // country: United States of America (35)
 ];
 
-// var dataset = [ 
-// [{color: colors[0], intensity: 0.1}, {color: colors[3], intensity: 0.5}, {color: colors[3], intensity: 0.75}],
-// [{color: colors[2], intensity: 0.1}, {color: colors[5], intensity: 0.3}, {color: colors[0], intensity: 0.9}],
-// [{color: colors[0], intensity: 0.25}, {color: colors[1], intensity: 0.2}, {color: colors[2], intensity: 0.9}],
-// [{color: colors[3], intensity: 0.84}, {color: colors[0], intensity: 0.5}, {color: colors[1], intensity: 0.75}],
-// [{color: colors[2], intensity: 0.1}, {color: colors[5], intensity: 0.3}, {color: colors[0], intensity: 0.9}],
-// ];
+
 
 var dataset = [ 
-  [{title: "Lockheed U-2C", colorYear: colors[0], intensity: 0.5, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[1]}, 
-   {title: "Boeing FB-5 Hawk", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[1]},
-   {title: "Story Little Gee Bee", colorYear: colors[0], intensity: 0.4, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[1]},
-   {title: "Pitts S-1S Special", colorYear: colors[0], intensity: 0.5, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[10], colorMaterial5: colors[6]}],
+  [{title: "Lockheed U-2C", colorYear: colors[0], intensity: 0.5, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[1], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}, 
+   {title: "Boeing FB-5 Hawk", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[1], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]},
+   {title: "Story Little Gee Bee", colorYear: colors[0], intensity: 0.4, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[1], colorCountry1: colors[1], colorCountry2: colors[1], colorCountry3: colors[1]},
+   {title: "Pitts S-1S Special", colorYear: colors[0], intensity: 0.5, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[10], colorMaterial5: colors[6], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}],
 
-  [{title: "Boeing 247-D", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[2]}, 
-   {title: "Huff-Daland Duster", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[10], colorMaterial5: colors[6]},  
-   {title: "Wills Wing Talon 150", colorYear: colors[0], intensity: 0.7, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[1]},
-   {title: "Douglas World Cruiser Chicago", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[11], colorMaterial3: colors[5], colorMaterial4: colors[10], colorMaterial5: colors[2]}],
+  [{title: "Boeing 247-D", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[2], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}, 
+   {title: "Huff-Daland Duster", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[10], colorMaterial5: colors[6], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]},  
+   {title: "Wills Wing Talon 150", colorYear: colors[0], intensity: 0.7, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[1], colorCountry1: colors[1], colorCountry2: colors[1], colorCountry3: colors[1]},
+   {title: "Douglas World Cruiser Chicago", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[11], colorMaterial3: colors[5], colorMaterial4: colors[10], colorMaterial5: colors[2], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}],
 
-  [{title: "Nakajima Ki-115a  Tsurugi (Sabre)", colorYear: colors[0], intensity: 0.4, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[10], colorMaterial5: colors[11]},
-   {title: "Boeing B-29 Superfortress 'Enola Gay'", colorYear: colors[0], intensity: 0.4, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[2]}, 
-   {title: "Rutan Quickie", colorYear: colors[0], intensity: 0.6, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[1]}],
+  [{title: "Nakajima Ki-115a  Tsurugi (Sabre)", colorYear: colors[0], intensity: 0.4, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[10], colorMaterial5: colors[11], colorCountry1: colors[21], colorCountry2: colors[22], colorCountry3: colors[1]},
+   {title: "Boeing B-29 Superfortress 'Enola Gay'", colorYear: colors[0], intensity: 0.4, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[2], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}, 
+   {title: "Rutan Quickie", colorYear: colors[0], intensity: 0.6, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[1], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}],
 
-  [{title: "Fairchild FC-2", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[10], colorMaterial5: colors[5]}, 
-   {title: "Bücker Bü-133C Jungmeister", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[10], colorMaterial5: colors[6]}, 
-   {title: "Northrop 4A Alpha", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[2]}],
+  [{title: "Fairchild FC-2", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[10], colorMaterial5: colors[5], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}, 
+   {title: "Bücker Bü-133C Jungmeister", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[10], colorMaterial5: colors[6], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}, 
+   {title: "Northrop 4A Alpha", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[2], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}],
 
-  [{title: "Douglas SBD-6 Dauntless", colorYear: colors[0], intensity: 0.4, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[10], colorMaterial4: colors[7], colorMaterial5: colors[6]}, 
-   {title: "1903 Wright Flyer", colorYear: colors[0], intensity: 0.2, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[11], colorMaterial4: colors[6], colorMaterial5: colors[2]}, 
-   {title: "Grumman F6F-3K Hellcat", colorYear: colors[0], intensity: 0.4, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[1]}],
+  [{title: "Douglas SBD-6 Dauntless", colorYear: colors[0], intensity: 0.4, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[10], colorMaterial4: colors[7], colorMaterial5: colors[6], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}, 
+   {title: "1903 Wright Flyer", colorYear: colors[0], intensity: 0.2, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[11], colorMaterial4: colors[6], colorMaterial5: colors[2], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}, 
+   {title: "Grumman F6F-3K Hellcat", colorYear: colors[0], intensity: 0.4, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[1], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}],
 
-  [{title: "Boeing F4B-4", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[10], colorMaterial2: colors[11], colorMaterial3: colors[6], colorMaterial4: colors[7], colorMaterial5: colors[8]}, 
-   {title: "Curtiss Model E Flying Boat (hull only)", colorYear: colors[0], intensity: 0.2, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[11]},  
-   {title: "Langley Aerodrome Number 5", colorYear: colors[0], intensity: 0.2, colorCover: colors[1], colorMaterial1: colors[11], colorMaterial2: colors[9], colorMaterial3: colors[10], colorMaterial4: colors[3], colorMaterial5: colors[4]}],
+  [{title: "Boeing F4B-4", colorYear: colors[0], intensity: 0.3, colorCover: colors[1], colorMaterial1: colors[10], colorMaterial2: colors[11], colorMaterial3: colors[6], colorMaterial4: colors[7], colorMaterial5: colors[8], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}, 
+   {title: "Curtiss Model E Flying Boat (hull only)", colorYear: colors[0], intensity: 0.2, colorCover: colors[1], colorMaterial1: colors[1], colorMaterial2: colors[1], colorMaterial3: colors[1], colorMaterial4: colors[1], colorMaterial5: colors[11], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]},  
+   {title: "Langley Aerodrome Number 5", colorYear: colors[0], intensity: 0.2, colorCover: colors[1], colorMaterial1: colors[11], colorMaterial2: colors[9], colorMaterial3: colors[10], colorMaterial4: colors[3], colorMaterial5: colors[4], colorCountry1: colors[33], colorCountry2: colors[34], colorCountry3: colors[35]}],
   ];
 
 
@@ -81,16 +99,6 @@ grid.selectAll("g")
   .attr("transform", function (d, i) {
     return "translate(" + i * cellSize + ")"
   })
-
-  // .selectAll("circle")
-  // .data(function(d) {return d;})
-  // .enter().append("circle")
-  // .attr("fill", function(d) {
-  //   return "rgb(" + d.color[0] + "," + d.color[1] + "," + d.color[2] + ")"
-  // })
-  // .attr("fill-opacity", function (d) {
-  //   return d.intensity;
-  // })
   
   .selectAll("rect")
   .data(function(d) {return d;})
@@ -214,7 +222,7 @@ grid.selectAll("year-cover")
 
 
 /*************
-Materials
+Material
 **************/
 // material 1
 grid.selectAll("material")
@@ -327,6 +335,80 @@ grid.selectAll("material")
   .attr("x", 40)
   .attr("y", function(d, i) {
     return 70 + gap + i * cellSize + 0;
+  })
+  .attr("width", 10)
+  .attr("height", 10);
+
+  
+
+/*************
+Country
+**************/
+// country 1
+grid.selectAll("country")
+  .data(dataset)
+  .enter().append("g")
+  .attr("transform", function (d, i) {
+    return "translate(" + i * cellSize + ")"
+  })
+
+  .selectAll("rect")
+  .data(function(d) {return d;})
+  .enter().append("rect")
+  .attr("fill", function(d) {
+    return "rgb(" + d.colorCountry1 + ")"
+  })
+  .attr("fill-opacity", 1)
+  
+  .attr("x", 70)
+  .attr("y", function(d, i) {
+    return 70 + gap + i * cellSize + 0;
+  })
+  .attr("width", 10)
+  .attr("height", 10);
+  
+// country 2
+grid.selectAll("country")
+  .data(dataset)
+  .enter().append("g")
+  .attr("transform", function (d, i) {
+    return "translate(" + i * cellSize + ")"
+  })
+
+  .selectAll("rect")
+  .data(function(d) {return d;})
+  .enter().append("rect")
+  .attr("fill", function(d) {
+    return "rgb(" + d.colorCountry2 + ")"
+  })
+  .attr("fill-opacity", 1)
+  
+  .attr("x", 70)
+  .attr("y", function(d, i) {
+    return 80 + gap + i * cellSize + 0;
+  })
+  .attr("width", 10)
+  .attr("height", 10);
+
+// country 3
+grid.selectAll("country")
+  .data(dataset)
+  .enter().append("g")
+  .attr("transform", function (d, i) {
+    return "translate(" + i * cellSize + ")"
+  })
+
+  .selectAll("rect")
+  .data(function(d) {return d;})
+  .enter().append("rect")
+  .attr("fill", function(d) {
+    return "rgb(" + d.colorCountry3 + ")"
+  })
+  .attr("fill-opacity", 1)
+  
+  .attr("x", 70)
+  .attr("y", function(d, i) {
+    return 90 + gap + i * cellSize + 0;
   })
   .attr("width", 10)
   .attr("height", 10);
