@@ -1,7 +1,5 @@
 # display images with d3.js
 
-![./images/demo.png](./images/demo.png)
-
 ---
 
 this example code:
