@@ -1,4 +1,4 @@
-# display images with d3.js
+## Project 02 - The Color of War
 
 ---
 
