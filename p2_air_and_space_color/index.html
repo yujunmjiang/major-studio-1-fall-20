@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Major Studio 1 - Lab 6 - d3 Image Display</title>
+
+    <style type="text/css">
+      *{
+        margin:0;padding:0;
+        box-sizing: border-box;
+      }
+      body{
+        overflow:  auto;
+        font-family: 'IBM Plex Mono', monospace;
+        background:#e0e0e0;
+        padding:2rem;
+        color:#222;
+        letter-spacing:-0.5pt;
+      }
+      p{
+        font-size: 10pt;
+      }
+      #app{
+        margin-top:2rem;
+        display:grid;
+        grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 2rem;
+      }
+      
+      div.smithsonian-card{
+        max-width: 400px;
+        display: inline-block;
+
+        vertical-align:top;
+        white-space:normal;
+      }
+      div.smithsonian-card h2{
+        font-size:1.2rem;
+        line-height:1.1;
+        padding-bottom:0.5em;
+      }
+      div.smithsonian-card div.image{
+        margin-bottom:1rem;
+        width:200px;height:200px;
+        display:flex;
+        align-items: flex-end;
+      }
+      div.smithsonian-card div.image img{
+        max-width:100%;height:auto;
+        max-height:200px;
+      }
+      .object-date{ color:#999; }
+    </style>
+  </head>
+  <body>
+
+    <h1>The Color of War</h1>
+
+    <br />
+    <p>Aircraft camouflage is the use of camouflage on military aircraft to make them more difficult to see, whether on the ground or in the air. Given the possible backgrounds and lighting conditions, no single scheme works in every situation. A common approach has been a form of countershading, the aircraft being painted in a disruptive pattern of ground colours such as green and brown above, sky colours below. For faster and higher-flying aircraft, sky colours have sometimes been used all over, while helicopters and fixed-wing aircraft used close to the ground are often painted entirely in ground camouflage. Aircraft flying by night have often been painted black, but this actually made them appear darker than the night sky, leading to paler night camouflage schemes. There are trade-offs between camouflage and aircraft recognition markings, and between camouflage and weight. Accordingly, visible light camouflage has been dispensed with when air superiority was not threatened or when no significant aerial opposition was anticipated.</p>
+    <br />
+    <p>Aircraft were first camouflaged during World War I; aircraft camouflage has been widely employed since then. In World War II, disruptive camouflage became widespread for fighters and bombers, sometimes combined with countershading. Some air forces such as the German Luftwaffe varied their paint schemes to suit differing flight conditions such as the skyglow over German cities, or the sands of the Mediterranean front.</p>
+    <br />
+    <p>During and after World War II, the Yehudi lights project developed counter-illumination camouflage using lamps to increase the brightness of the aircraft to match the brightness of the sky. This was abandoned with improvements in radar, which seemed to render visible light camouflage redundant. However, aircraft continue to be painted in camouflage schemes; recent experiments have again explored active camouflage systems which allow colours, patterns and brightness to be changed to match the background, and some air forces have painted their fighters in digital camouflage patterns. Stealth technology, as in the Lockheed F-117 Nighthawk, aims to minimize an aircraft's radar cross-section and infrared signature, effectively providing multi-spectral camouflage at the price of reduced flying performance. Stealth may extend to avoiding or preventing vapour contrails.</p>
+    
+    <!-- where our images go -->
+    <div id="app"></div>
+
+  </body>
+  <script src="./libraries/d3.v5.min.js"></script>
+  <script src="app.js"></script>
+</html>
