@@ -3,14 +3,15 @@
 // Using this data set https://collections.si.edu/search/results.htm?q=Flowers&view=grid&fq=data_source%3A%22Cooper+Hewitt%2C+Smithsonian+Design+Museum%22&fq=online_media_type%3A%22Images%22&media.CC0=true&fq=object_type:%22Embroidery+%28visual+works%29%22
 
 // put your API key here;
-const apiKey = "l6fR6U2cj3UzL44xNCaJ31JHe8mF3pd28l0bN1ZH";  
+const apiKey = "FaSc3OCmUbeep2qROMM0c5KScCEXh8sIudEl2XZ8";  
 
 // search base URL
 const searchBaseURL = "https://api.si.edu/openaccess/api/v1.0/search";
 
 // constructing the initial search query
 // const search =  'mask AND unit_code:"FSG"';
-const search =  `Flowers AND unit_code:"CHNDM" AND object_type:"Embroidery (visual works)" AND online_media_type:"Images"`;
+// const search =  `Flowers AND unit_code:"CHNDM" AND object_type:"Embroidery (visual works)" AND online_media_type:"Images"`;
+const search =  `Jades AND unit_code:"FSG" AND object_type:"Jades (objects)" AND online_media_type:"Images" AND rows:"1000"`;
 
 
 // array that we will write into
