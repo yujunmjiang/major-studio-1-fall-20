@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NASM Collection</title>
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        <!-- CSS Style Sheet -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Load Leaflet code library - see updates at http://leafletjs.com/download.html -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+        <!-- Load P5 code library - see updates at https://p5js.org/download/ -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+        
+    </head>
+    
+    <body>
+        <div class="logo">
+            <a href="https://www.si.edu"><img src="images/si-logo.png" alt="Smithsonian Institution Logo"></a>
+        </div>
+
+        <div id="intro">
+            <h1>Reviewing the trend of aerospace industry (design + innovation) in the past 120 years</h1>
+            <p>
+            The aerospace industry ranks among the world’s largest manufacturing industries in terms of people employed and value of output. Yet even beyond its sheer size, the aerospace industry was one of the defining industries of the twentieth century. As a socio-political phenomenon, aerospace has inflamed the imaginations of youth around the world, inspired new schools of industrial design, decisively bolstered both the self-image and power of the nation state, and shrunk the effective size of the globe. As an economic phenomenon, aerospace has consumed the major amount of research and development funds across many fields, subsidized innovation in a vast array of component technologies, evoked new forms of production, spurred construction of enormous manufacturing complexes, inspired technology-sensitive managerial techniques, supported dependent regional economies, and justified the deeper incursion of national governments into their economies. No other industry has so persistently and intimately interacted with the bureaucratic apparatus of the nation state.
+            <br />
+            <br />
+            Aerospace technology permeates many other industries — travel and tourism, logistics, telecommunications, electronics and computing, advanced materials, civil construction, capital goods manufacture, and defense supply. Here, the aerospace industry is defined by those firms that design and build vehicles that fly through our atmosphere and outer space.
+            </p>
+        </div>
+        
+        <div class="map-wrapper" onload="init()">
+            <div id="mapid"></div>
+        </div>
+
+        <div id="container" style="width: 100%;">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <!-- partial -->
+        <script src="js/sketch.js"></script>
+        <script src="js/Leaflet.CountrySelect.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js'></script>
+        <script  src="js/script.js"></script>
+
+    </body>
+
+</html>

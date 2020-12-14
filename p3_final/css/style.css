@@ -1,0 +1,35 @@
+body {
+  background-color: white;
+  font-family: myriad-pro, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.logo img {
+  width: 15%;
+  margin-top: 2.5%;
+  margin-left: 10%;
+}
+
+h1 {
+  line-height: 1.2;
+  width: 50%;
+  margin-top: 2.5%;
+  margin-left: 10%;
+}
+
+p {
+  line-height: 1.8;
+  width: 50%;
+  margin-top: 2.5%;
+  margin-left: 10%;
+}
+
+#mapid {
+  height: 600px;
+  margin-top: 2.5%;
+}
+
+#canvas {
+  margin-top: 2.5%;
+}
